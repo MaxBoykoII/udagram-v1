@@ -35,10 +35,9 @@ import { filterImageFromURL, deleteLocalFiles } from './util/util';
     !inputUrl ?
       res.status(400).send('Please include an image url.') :
       filterImageFromURL(inputUrl)
-        .then(path => (res.sendFile(path)))
-        .catch(error => {
-          res.status(500).send(error)
-        })
+        .then(path => (res.sendFile(path), path))
+        .then(path => res.on('finish', () => deleteLocalFiles([path])))
+        .catch(error => res.status(500).send(error))
   });
   //! END @TODO1
 
