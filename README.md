@@ -1,5 +1,11 @@
 # Udagram Image Filtering Microservice
 
+## Live Elastic Beanstalk Deployment
+A live deployment of this project is available at [http://image-filter-dev.us-west-2.elasticbeanstalk.com/].
+
+## Repository Link
+The code for this project is available at [https://github.com/MaxBoykoII/udagram-v1].
+
 ## Tasks
 
 ### Setup Node Enviornment
